@@ -177,11 +177,11 @@ const Resume = () => {
                 </Link>
             </nav>
 
-            <div className="flex flex-row w-full max-lg:flex-col-reverse">
+            <div className="flex flex-row w-full max-lg:flex-col">
                 {/* Left: Resume preview */}
-                <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover h-[100vh] sticky top-0 flex items-center justify-center">
+                <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover lg:h-[100vh] lg:sticky lg:top-0 flex items-center justify-center max-lg:min-h-[260px] max-lg:py-6">
                     {imageUrl && resumeUrl ? (
-                        <div className="animate-in fade-in duration-700 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
+                        <div className="animate-in fade-in duration-700 gradient-border max-sm:m-0 max-lg:h-[240px] lg:h-[90%] w-fit">
                             <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                                 <img
                                     src={imageUrl}
@@ -197,8 +197,8 @@ const Resume = () => {
                 </section>
 
                 {/* Right: Feedback */}
-                <section className="feedback-section p-6 md:p-10">
-                    <h2 className="text-4xl !text-black font-bold mb-8">Resume Review</h2>
+                <section className="feedback-section p-4 md:p-10">
+                    <h2 className="text-2xl md:text-4xl !text-black font-bold mb-6 md:mb-8">Resume Review</h2>
 
                     {analysisError ? (
                         <div className="bg-red-50 border border-red-200 rounded-lg p-5 text-red-700">

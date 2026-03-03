@@ -32,7 +32,7 @@ main {
 
 /* FIX: h1 uses the text-gradient utility defined below */
 h1 {
-  @apply text-6xl leading-tight tracking-[-2px] font-semibold;
+  @apply text-4xl sm:text-5xl md:text-6xl leading-tight tracking-[-1px] md:tracking-[-2px] font-semibold;
   background: linear-gradient(to right, #AB8C95, #000000, #8E97C5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,14 +78,14 @@ form {
   }
 
   .resume-nav {
-    @apply flex flex-row justify-between items-center p-4 border-b border-gray-200;
+    @apply flex flex-row justify-between items-center p-3 md:p-4 border-b border-gray-200;
   }
 
   .resume-summary {
-    @apply flex flex-row items-center justify-center p-4 gap-4;
+    @apply flex flex-col sm:flex-row items-center justify-center p-3 md:p-4 gap-3 md:gap-4;
 
     .category {
-      @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-4 w-full justify-between;
+      @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-3 md:p-4 w-full justify-between;
     }
   }
 
@@ -94,25 +94,25 @@ form {
   }
 
   .auth-button {
-    @apply rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
+    @apply rounded-full py-3 px-6 cursor-pointer w-full max-w-[600px] text-xl sm:text-2xl md:text-3xl font-semibold text-white;
     background: linear-gradient(to bottom, #8e98ff, #606beb);
   }
 
   .main-section {
     /* FIX: mx-15 is not a valid Tailwind value — replaced with mx-auto */
-    @apply flex flex-col items-center gap-8 pt-12 mx-auto pb-5;
+    @apply flex flex-col items-center gap-6 pt-8 md:pt-12 mx-auto pb-5 px-4;
   }
 
   .page-heading {
-    @apply flex flex-col items-center gap-8 max-w-4xl text-center;
+    @apply flex flex-col items-center gap-4 md:gap-8 max-w-4xl text-center w-full px-2;
   }
 
   .resumes-section {
-    @apply flex flex-wrap max-lg:flex-col gap-6 items-start w-full max-w-[1850px] justify-evenly;
+    @apply flex flex-wrap gap-6 items-start w-full max-w-[1850px] justify-evenly px-2;
   }
 
   .resume-card {
-    @apply flex flex-col gap-8 h-[560px] w-full lg:w-[450px] xl:w-[490px] bg-white rounded-2xl p-4;
+    @apply flex flex-col gap-4 md:gap-8 h-auto min-h-[420px] md:h-[560px] w-full sm:w-[calc(50%-12px)] lg:w-[450px] xl:w-[490px] bg-white rounded-2xl p-4;
   }
 
   .resume-card-header {
@@ -120,11 +120,11 @@ form {
   }
 
   .feedback-section {
-    @apply flex flex-col gap-8 w-1/2 px-8 max-lg:w-full py-6;
+    @apply flex flex-col gap-8 w-full lg:w-1/2 px-4 md:px-8 py-6;
   }
 
   .navbar {
-    @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto;
+    @apply flex flex-row justify-between items-center bg-white rounded-full p-3 md:p-4 w-full px-4 md:px-10 max-w-[1200px] mx-auto gap-2;
   }
 
   .score-badge {
