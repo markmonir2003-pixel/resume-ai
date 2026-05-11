@@ -19,9 +19,6 @@ export default function Home() {
   const [loadingResumes, setLoadingResumes] = useState(true);
 
   // FIX: added `navigate` to deps array to avoid stale-closure lint warning.
-  useEffect(() => {
-    if (!auth.isAuthenticated) navigate("/auth?next=/");
-  }, [auth.isAuthenticated, navigate]);
 
   useEffect(() => {
     const loadResumes = async () => {

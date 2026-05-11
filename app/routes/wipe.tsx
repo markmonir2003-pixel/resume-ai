@@ -16,11 +16,6 @@ const WipeApp = () => {
         loadFiles();
     }, []);
 
-    useEffect(() => {
-        if (!isLoading && !auth.isAuthenticated) {
-            navigate("/auth?next=/wipe");
-        }
-    }, [isLoading]);
 
     const handleDelete = async () => {
         files.forEach(async (file) => {
@@ -40,7 +35,6 @@ const WipeApp = () => {
 
     return (
         <div>
-            Authenticated as: {auth.user?.username}
             <div>Existing files:</div>
             <div className="flex flex-col gap-4">
                 {files.map((file) => (

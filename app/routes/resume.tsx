@@ -45,12 +45,6 @@ const Resume = () => {
         setIsPolling(false);
     }, []);
 
-    // Redirect if not authenticated
-    useEffect(() => {
-        if (!isLoading && !auth.isAuthenticated) {
-            navigate(`/auth?next=/resume/${id}`);
-        }
-    }, [isLoading, auth.isAuthenticated, id, navigate]);
 
     useEffect(() => {
         if (!id) return;
